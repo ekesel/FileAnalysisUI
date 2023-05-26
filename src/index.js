@@ -1,16 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { Route, Routes, BrowserRouter as Router } from 'react-router-dom'  
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import AnalysisDashboard from './AnalysisDashboard';
 
+const routing = (  
+  <Router>
+      <Routes>
+      <Route path="" element={<App />} />  
+      <Route path="/analysis" element={<AnalysisDashboard />} /> 
+      </Routes>
+  </Router>  
+)  
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-  </React.StrictMode>
+root.render(routing
 );
 
 // If you want to start measuring performance in your app, pass a function

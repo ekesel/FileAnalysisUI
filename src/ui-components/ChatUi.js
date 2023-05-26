@@ -7,8 +7,10 @@ const ChatUi = (props) => {
         bubbles.push(<LeftBubble
             msg={"Let me check this for you!"}
         />);
+        bubbles.push(<LeftBubble
+            msg={"Please click on the file to access the analysis."}
+        />);
     }
-    console.log(bubbles);
     return (
         <div>
             <div className='chatContainer'>

@@ -21,7 +21,7 @@ code {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  height: 7rem;
+  height: 6.5rem;
 }
 
 .leftNavItems {
@@ -133,6 +133,11 @@ code {
   font-size: large;
 }
 
+.itemRow > a {
+  color: inherit;
+  text-decoration: inherit; 
+}
+
 .fileIcon {
   margin-right: 0.5rem;
 }
@@ -142,12 +147,29 @@ code {
   float: right;
   margin: 2rem;
   font-size: 1.5rem;
+  overflow:hidden;
+  height: 50px;
+}
+
+.welcomeText div:first-child {
+  animation: text-animation 15s infinite;
+}
+
+.welcomeText > div > div {
+  height:2.81rem;
+  margin-bottom: 2.81rem;
+  display:inline-block;
+  text-shadow: 0 0 7px rgba(255,255,255,.3), 0 0 3px rgba(255,255,255,.3);  
+}
+
+.welcomeText > span {
+  color: rgb(87, 87, 87);
 }
 
 /* chat type ui */
 
 .chatContainer {
-  margin-top: 2rem;
+  margin-top: 4.5rem;
   width: 20rem;
 }
 
@@ -155,6 +177,7 @@ code {
   background-color: #eeeeee;
   padding: 1rem;
   border: 1px solid #eeeeee;
+  color: rgb(54, 54, 54);
   border-radius: 15px 50px 30px 5px;
   margin: 1rem;
   transform-origin: 0 100%;
@@ -189,4 +212,91 @@ code {
     overflow: visible;
     padding-top: 1rem;
   }
+}
+
+/* analysis dashboard */
+
+.downloadButton {
+  float: right;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.dashboardContainer {
+  display: grid;
+}
+
+.dashboardRow {
+  padding: 2rem;
+}
+
+.dashboardInnerFlex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper_flex {
+  flex-wrap: wrap
+}
+
+.rowItems {
+  padding: 1rem;
+  margin-left: 1rem;
+}
+
+.header {
+  color: #12b6aa;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.dataPoints {
+  display: grid;
+  margin-top: 1rem;
+}
+
+.dataPoints > span {
+  padding: 0.5rem;
+  margin-left: 0.4rem;
+}
+
+.line-chart {
+  width: 600px;
+  height: 300px;
+  padding-left: 40px;
+}
+
+.recommendations {
+  flex: 75%;
+}
+
+.recommendationPoints {
+  margin-top: 2rem;
+  color: rgb(92, 91, 91);
+  display: grid;
+  font-size: 20px;
+}
+
+.recommendationPoints > span {
+  padding: 1rem;
+}
+
+.pie-chart {
+  margin: 1rem;
+  flex: 25%;
+  max-width: 400px;
+  max-height: 400px;
+}
+
+@keyframes text-animation {
+  0% {margin-top: 0;}
+  10% {margin-top: 0;}
+  20% {margin-top: -5.62rem;}
+  30% {margin-top: -5.62rem;}
+  40% {margin-top: -11.24rem;}
+  60% {margin-top: -11.24rem;}
+  70% {margin-top: -5.62rem;}
+  80% {margin-top: -5.62rem;}
+  90% {margin-top: 0;}
+  100% {margin-top: 0;}
 }

@@ -15,9 +15,11 @@ function App() {
       </div>
       <div className='rightUI'>
         <div className='welcomeText'>
-            Welcome Back!
+          <div><div class="first">Welcome Back! 👋</div></div>
+          <div><div class="second">Together again! 😍</div></div>
+          <div><div class="third">Missed You! 🙂</div></div>
         </div>
-        <ChatUi fileCount={fileItems.length}/>
+        <ChatUi fileCount={fileItems.length} />
       </div>
     </React.Fragment>
   );
